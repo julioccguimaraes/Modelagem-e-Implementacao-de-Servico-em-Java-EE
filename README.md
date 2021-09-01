@@ -2,6 +2,7 @@
 Estrutura de diretórios base para o projeto Java EE.
 
 Executar os scripts no HSQLDB e criar um recurso com JNDI name 'java:/ProductDS'.
+
 Para criar a fila, execute o comando: jms-queue add --queue-address=trabalhodm110queue --durable=true --entries=["java:/jms/queue/trabalhodm110queue"]
 
 CREATE TABLE PRODUCT (

@@ -6,6 +6,7 @@ import java.util.Set;
 import javax.ws.rs.ApplicationPath;
 import javax.ws.rs.core.Application;
 
+import br.inatel.dm110.impl.LogServiceImpl;
 import br.inatel.dm110.impl.ProductServiceImpl;
 
 @ApplicationPath("/api")
@@ -16,6 +17,7 @@ public class RestApplication extends Application {
 		Set<Class<?>> classes = new HashSet<>();
 		
 		classes.add(ProductServiceImpl.class);
+		classes.add(LogServiceImpl.class);
 		
 		return classes;
 	}

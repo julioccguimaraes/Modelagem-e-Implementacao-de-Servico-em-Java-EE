@@ -13,26 +13,26 @@ import br.inatel.dm110.interfaces.product.ProductLocal;
 public class ProductServiceImpl implements ProductService {
 
     @EJB
-    private ProductLocal ProductBean;
+    private ProductLocal productBean;
     
 	@Override
-	public void saveProduct(ProductTO product) {
-		ProductBean.saveProduct(product);
+	public String saveProduct(ProductTO product) {
+		return productBean.saveProduct(product);
 	}
 
 	@Override
 	public ProductTO findProductByCode(int code) {
-		return ProductBean.findProductByCode(code);
+		return productBean.findProductByCode(code);
 	}
 
 	@Override
 	public List<ProductTO> listProducts() {
-		return ProductBean.listProducts();
+		return productBean.listProducts();
 	}
 
 	@Override
 	public void updateProduct(int code, ProductTO product) {
-		ProductBean.updateProduct(code, product);
+		productBean.updateProduct(code, product);
 	}
 
 }

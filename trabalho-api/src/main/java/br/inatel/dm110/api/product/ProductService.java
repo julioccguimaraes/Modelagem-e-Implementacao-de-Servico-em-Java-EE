@@ -15,8 +15,9 @@ import javax.ws.rs.core.MediaType;
 public interface ProductService {
 	
 	@POST
+	@Produces(MediaType.TEXT_PLAIN)
 	@Consumes(MediaType.APPLICATION_JSON)
-	public void saveProduct(ProductTO product);
+	public String saveProduct(ProductTO product);
 
 	@GET
 	@Path("{code}")
